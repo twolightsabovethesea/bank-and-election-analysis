@@ -24,7 +24,6 @@ with open(csvpath) as csvfile:
         #adds up the total profit/loss
         total = total + int(i[1])
         if previousmonth != None:
-            #monthlychange = int(i[1]) - int(previousmonth)
             changes.append(int(i[1]) - previousmonth)
             monthlist.append(i[0])
         previousmonth = int(i[1])
@@ -36,12 +35,6 @@ for i in changes:
         maxdate = changes.index(i)
     if i == min(changes):
         mindate = changes.index(i)
-#print(f"greatest increase {monthlist[maxdate]} {max(changes)}")
-#print(f"greatest decrease {monthlist[mindate]} {min(changes)}")
-
-#print(avechange)
-#print(months)
-#print(total)
 
 print(f"Financial Analysis\n---------------------------- \nTotal Months: {months}\nTotal: ${total}")
 print(f"Average Change: ${round(avechange,2)}")
