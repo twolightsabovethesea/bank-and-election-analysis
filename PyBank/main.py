@@ -48,6 +48,16 @@ print(f"Average Change: ${round(avechange,2)}")
 print(f"Greatest Increase in Profits: {monthlist[maxdate]} (${max(changes)})")
 print(f"Greatest Decrease in Profits: {monthlist[mindate]} (${min(changes)})")
 
+outputpath = os.path.join("analysis","analysis.txt")
+
+with open (outputpath, 'w') as file:
+    file.write(f"Financial Analysis")
+    file.write("\n----------------------------")
+    file.write(f"\nTotal Months: {months}")
+    file.write(f"\nTotal: ${total}")
+    file.write(f"\nAverage Change: ${round(avechange,2)}")
+    file.write(f"\nGreatest Increase in Profits: {monthlist[maxdate]} (${max(changes)})")
+    file.write(f"\nGreatest Decrease in Profits: {monthlist[mindate]} (${min(changes)})")
 
 
 
