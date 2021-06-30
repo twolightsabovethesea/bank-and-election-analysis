@@ -14,7 +14,8 @@ with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
     csvheader = next(csvreader)
 
+    for row in csvreader:
+        vote_total += 1
     
-
-
+print(vote_total)
     
