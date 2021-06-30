@@ -44,6 +44,8 @@ KhanP = round((Khan/vote_total)*100, 3)
 CorreyP = round((Correy/vote_total)*100, 3)
 LiP = round((Li/vote_total)*100, 3)
 OTooleyP = round((OTooley/vote_total)*100, 3)
+
+#candidate_dict = {"Khan" : "(KhanP)"}
     
 
 #Prints election results to terminal
@@ -53,3 +55,21 @@ print(f"Khan: {KhanP}% ({Khan})\n")
 print(f"Correy: {CorreyP}% ({Correy})\n")
 print(f"Li: {LiP}% ({Li})\n")
 print(f"O'Tooley: {OTooleyP}% ({OTooley})\n")
+print(f"---------------------------- \n")")
+print(f"Winner: \n")
+print(f"---------------------------- \n")")
+
+outputpath = os.path.join("analysis","analysis.txt")
+
+with open (outputpath, 'w') as file:
+    file.write(f"Election Results")
+    file.write(f"\n----------------------------")
+    file.write(f"\nTotal Votes: {vote_total}")
+    file.write(f"\n----------------------------")
+    file.write(f"\nKhan: {KhanP}% ({Khan})")
+    file.write(f"\nCorrey: {CorreyP}% ({Correy})")
+    file.write(f"\nLi: {LiP}% ({Li})")
+    file.write(f"\nO'Tooley: {OTooleyP}% ({OTooley})")
+    file.write(f"\n----------------------------")
+    file.write(f"\nWinner: ")
+    file.write(f"\n----------------------------")
