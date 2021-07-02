@@ -38,58 +38,18 @@ for i in candidate_dict:
     if (tally > winnercount):
         winnercount = tally
         winner = i
-#PRINT HEADER HERE
+
+#Prints analysis to Terminal
+print(f"---------------------------- \n")
+print(f"Election Results")
+print(f"---------------------------- \n")
 for k,v in output_dict.items():
     print(f"{k}: {v[0]}% ({v[1]})\n")
 
 print(f"---------------------------- \n")
 print(f"Winner: {winner}\n")
 print(f"---------------------------- \n")
-    #final_table = f"{i}:{prcnt} ({tally})\n"
-#print(final_table, end= '')
-#print(final_table)
 
-# print(f"Election Results\n---------------------------- \n")
-# print(f"Total Votes: {vote_total}\n---------------------------- \n")
-# print(f"Khan: {KhanP}% ({Khan})\n")
-# print(f"Correy: {CorreyP}% ({Correy})\n")
-# print(f"Li: {LiP}% ({Li})\n")
-# print(f"O'Tooley: {OTooleyP}% ({OTooley})\n")
-# print(f"---------------------------- \n")
-# print(f"Winner: \n")
-# print(f"---------------------------- \n")
-# print(winnercount)
-    
-        #total the votes for each candidate
-        # if row[2] == "Khan":
-        #     Khan += 1
-        # elif row[2] == "Correy":
-        #     Correy += 1
-        # elif row[2] == "Li":
-        #     Li += 1
-        # elif row[2] == "O'Tooley":
-        #     OTooley += 1
-
-
-
-#Calculate percentage of vote for each candidate
-# KhanP = round((Khan/vote_total)*100, 3)
-# CorreyP = round((Correy/vote_total)*100, 3)
-# LiP = round((Li/vote_total)*100, 3)
-# OTooleyP = round((OTooley/vote_total)*100, 3)
-
-    
-
-# #Prints election results to terminal
-# print(f"Election Results\n---------------------------- \n")
-# print(f"Total Votes: {vote_total}\n---------------------------- \n")
-# print(f"Khan: {KhanP}% ({Khan})\n")
-# print(f"Correy: {CorreyP}% ({Correy})\n")
-# print(f"Li: {LiP}% ({Li})\n")
-# print(f"O'Tooley: {OTooleyP}% ({OTooley})\n")
-# print(f"---------------------------- \n")
-# print(f"Winner: \n")
-# print(f"---------------------------- \n")
 
 #writes results to a txt file
 
