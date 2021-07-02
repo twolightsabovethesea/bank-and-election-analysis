@@ -28,7 +28,6 @@ with open(csvpath) as csvfile:
             candidate_dict[name] = 0
         candidate_dict[name] = candidate_dict[name] + 1
 
-print(candidate_dict)
 
 for i in candidate_dict:
     tally = candidate_dict.get(i)
