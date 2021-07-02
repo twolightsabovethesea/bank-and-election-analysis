@@ -43,6 +43,8 @@ for i in candidate_dict:
 
 print(f"Election Results")
 print(f"---------------------------- \n")
+print(f"Total Votes: {vote_total}\n")
+print(f"---------------------------- \n")
 for k,v in output_dict.items():
     print(f"{k}: {v[0]}% ({v[1]})\n")
 
@@ -58,8 +60,10 @@ outputpath = os.path.join("analysis","analysis.txt")
 with open (outputpath, 'w') as file:
     file.write(f"Election Results")
     file.write(f"\n----------------------------")
+    file.write(f"\nTotal Votes: {vote_total}")
+    file.write(f"\n----------------------------")
     for k,v in output_dict.items():
-    file.write(f"\n{k}: {v[0]}% ({v[1]})")
+        file.write(f"\n{k}: {v[0]}% ({v[1]})")
     file.write(f"\n----------------------------")
     file.write(f"\nWinner: {winner}")
     file.write(f"\n----------------------------")
