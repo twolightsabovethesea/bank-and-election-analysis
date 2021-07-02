@@ -6,15 +6,8 @@ import os
 vote_total = 0
 candidate_list = []
 candidate_dict = {}
-Khan = 0
-Correy = 0
-Li = 0
-OTooley = 0
-KhanP = 0
-CorreyP = 0
-LiP = 0
-OTooleyP = 0
 winnercount = 0
+output_dict = {}
 
 
 #imports csv containing data for project
@@ -39,13 +32,21 @@ print(candidate_dict)
 
 for i in candidate_dict:
     tally = candidate_dict.get(i)
-    prcnt = (tally/vote_total) * 100
+    prcnt = round((tally/vote_total) * 100, 3)
+    output_dict[i] = [prcnt, tally] 
 
     if (tally > winnercount):
         winnercount = tally
         winner = i
-    final_table = f"{i}:{prcnt} ({tally})\n"
-print(final_table, end= '')
+#PRINT HEADER HERE
+for k,v in output_dict.items():
+    print(f"{k}: {v[0]}% ({v[1]})\n")
+
+print(f"---------------------------- \n")
+print(f"Winner: {winner}\n")
+print(f"---------------------------- \n")
+    #final_table = f"{i}:{prcnt} ({tally})\n"
+#print(final_table, end= '')
 #print(final_table)
 
 # print(f"Election Results\n---------------------------- \n")

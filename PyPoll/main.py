@@ -5,6 +5,7 @@ import os
 #sets variables for data to be analyzed
 vote_total = 0
 candidate_list = []
+candidate_dict = {}
 Khan = 0
 Correy = 0
 Li = 0
@@ -45,7 +46,6 @@ CorreyP = round((Correy/vote_total)*100, 3)
 LiP = round((Li/vote_total)*100, 3)
 OTooleyP = round((OTooley/vote_total)*100, 3)
 
-#candidate_dict = {"Khan" : "(KhanP)"}
     
 
 #Prints election results to terminal
