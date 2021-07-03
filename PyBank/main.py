@@ -59,9 +59,3 @@ with open (outputpath, 'w') as file:
     file.write(f"\nAverage Change: ${round(avechange,2)}")
     file.write(f"\nGreatest Increase in Profits: {monthlist[maxdate]} (${max(changes)})")
     file.write(f"\nGreatest Decrease in Profits: {monthlist[mindate]} (${min(changes)})")
-
-
-
-
-
-
