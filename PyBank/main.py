@@ -14,8 +14,11 @@ monthlychange = 0
 avechange = 0
 monthlist = []
 
+#opens the csv file containing the bank data
+
 csvpath = os.path.join("Resources","budget_data.csv")
 with open(csvpath) as csvfile:
+    #reads the data in the csv file
     csvreader = csv.reader(csvfile, delimiter = ',')
     csvheader = next(csvreader)
     for i in csvreader:
