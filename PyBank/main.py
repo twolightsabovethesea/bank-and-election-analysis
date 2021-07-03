@@ -36,15 +36,17 @@ for i in changes:
     if i == min(changes):
         mindate = changes.index(i)
 
-#prints analysis to terminal
+#prints analysis to terminal with appropriate formatting
 
 print(f"Financial Analysis\n---------------------------- \nTotal Months: {months}\nTotal: ${total}")
 print(f"Average Change: ${round(avechange,2)}")
 print(f"Greatest Increase in Profits: {monthlist[maxdate]} (${max(changes)})")
 print(f"Greatest Decrease in Profits: {monthlist[mindate]} (${min(changes)})")
 
-#writes results of analysis to a txt file
+#opens a path to a text file for output
 outputpath = os.path.join("analysis","analysis.txt")
+
+#writes results of analysis to a txt file
 
 with open (outputpath, 'w') as file:
     file.write(f"Financial Analysis")
