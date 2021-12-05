@@ -16,4 +16,14 @@ Python is used to open and read the csv files, access and utilize specific value
 
 ## Results
 
+The bank portion and election portion of this project each includes its own analysis.
+
+![Image](https://github.com/twolightsabovethesea/bank-and-election-analysis/blob/main/images/bank_analysis.png)
+
+The bank data analysis includes information on increase and decrease in profits.
+
+
+![Image](https://github.com/twolightsabovethesea/bank-and-election-analysis/blob/main/images/election_analysis.png)
+
+The election data analysis includes total votes, percentages of votes by candidate, and the election winner.
 
